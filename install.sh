@@ -8,7 +8,7 @@ nvm_has() {
 }
 
 if [ -z "$NVM_DIR" ]; then
-  NVM_DIR="/data/webroot"
+  NVM_DIR="/data/webroot/.nvm"
 fi
 
 nvm_download() {
