@@ -8,7 +8,7 @@ nvm_has() {
 }
 
 if [ -z "$NVM_DIR" ]; then
-  NVM_DIR="$HOME/.nvm"
+  NVM_DIR="/data/webroot"
 fi
 
 nvm_download() {
@@ -96,12 +96,12 @@ echo
 
 # Detect profile file if not specified as environment variable (eg: PROFILE=~/.myprofile).
 if [ -z "$PROFILE" ]; then
-  if [ -f "$HOME/.bash_profile" ]; then
-    PROFILE="$HOME/.bash_profile"
-  elif [ -f "$HOME/.zshrc" ]; then
-    PROFILE="$HOME/.zshrc"
-  elif [ -f "$HOME/.profile" ]; then
-    PROFILE="$HOME/.profile"
+  if [ -f "/data/webroot/.bash_profile" ]; then
+    PROFILE="/data/webroot/.bash_profile"
+  elif [ -f "/data/webroot/.zshrc" ]; then
+    PROFILE="/data/webroot/.zshrc"
+  elif [ -f "/data/webroot/.profile" ]; then
+    PROFILE="/data/webroot/.profile"
   fi
 fi
 
